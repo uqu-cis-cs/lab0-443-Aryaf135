@@ -41,18 +41,93 @@ public class App{
 * Input: calling batman
 * Output: 2255464228626
 *
-*/
- 
-    public static void main(String [] args) {
+*/public static void main(String [] args) {
         
 
         /* Write your code here */
-     
+     twisters();
        //call method twisters()
        //prompt user to enter a string 
        //call method phoneKeypad(string)
-
-
+    Scanner scant  = new Scanner(System.in);
+   String str = scant.nextLine();
+   phoneKeypad(str);
     }
+public static void twisters(){
+for(int x = 1; x <= 20; x++){
+if( x% 6 ==0 || x % 4 == 0 || x % 2 ==0) {
+
+if (x % 2 == 0 ){
+System.out.print("Tweetle");
 
 }
+if(x % 4 == 0){
+    System.out.print("Beetle");
+}
+if(x % 6 == 0){
+    System.out.print( "Poodle");
+}
+}
+else
+ {
+    System.out.print( x );
+}
+System.out.print(" ");
+}
+}
+
+public static void phoneKeypad (String str){
+    String out = "";
+    for(int n = 0; n < str.length(); n++){
+ char a = str.toUpperCase().charAt(n);
+     switch(a){
+       case 'A' : case 'B': case 'C':
+        out+='2';
+        break;
+         case 'D' : case 'E' : case 'F' :
+        out +='3';
+        break;
+         case 'G' : case 'H' : case 'I':
+        out += '4';
+        break;
+         case 'J' : case 'K' : case 'L':
+        out += '5';
+        break;
+         case 'M' : case 'N' : case 'O': 
+         out += '6';
+         break;
+        case  'P' : case 'Q' : case 'R' : case 'S': 
+        out += '7';
+       break;
+       case 'T': case 'U': case 'V':
+     out+='8';
+     break;
+     case 'W': case 'X': case 'Y': case 'Z':
+     out+='9';
+     break;
+     }
+    }System.out.print(out);
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    
+
+    
+
+
